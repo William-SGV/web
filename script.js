@@ -19,7 +19,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Contador de clics (ejemplo fase 4)
+// Contador de clics 
 const contadorBtn = document.getElementById('contadorBtn');
 const display = document.getElementById('counter');
 let count = 0;
@@ -29,5 +29,3 @@ if (contadorBtn && display) {
     display.textContent = count;
   });
 }
-// Mostrar saludo personalizado en consola
-console.log(`${obtenerSaludo()} Bienvenido a Chocolates William`);
