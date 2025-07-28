@@ -1,0 +1,234 @@
+/* Chocolates William - Estilos CSS */
+
+:root {
+    --chocolate-brown: hsl(25, 75%, 31%);
+    --golden-yellow: hsl(45, 68%, 52%);
+    --mint-green: hsl(120, 60%, 35%);
+    --cream: hsl(60, 56%, 91%);
+    --dark-brown: hsl(25, 50%, 15%);
+    --light-brown: hsl(33, 44%, 69%);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dark-brown);
+    background-color: hsl(0, 0%, 99%);
+}
+
+.navbar {
+    background-color: var(--chocolate-brown) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: var(--golden-yellow) !important;
+    transition: color 0.3s ease;
+}
+
+/* Animación para títulos principales */
+.animated-title {
+    font-family: 'Playfair Display', serif;
+    animation: slideInUp 1s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section {
+    background: linear-gradient(rgba(139, 69, 19, 0.8), rgba(139, 69, 19, 0.8)), 
+                url('https://images.unsplash.com/photo-1511381939415-e44015466834?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080');
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.btn-chocolate {
+    background-color: var(--golden-yellow);
+    border: none;
+    color: var(--dark-brown);
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.btn-chocolate:hover {
+    background-color: hsl(45, 68%, 42%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    color: var(--dark-brown);
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--chocolate-brown);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--golden-yellow);
+}
+
+.product-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.product-image {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.product-info {
+    padding: 1.5rem;
+    background-color: white;
+}
+
+.product-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--chocolate-brown);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    color: var(--golden-yellow);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.about-section {
+    background-color: var(--cream);
+    padding: 5rem 0;
+}
+
+.contact-section {
+    background-color: var(--chocolate-brown);
+    color: white;
+    padding: 4rem 0;
+}
+
+.contact-info {
+    background-color: rgba(255,255,255,0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.footer {
+    background-color: var(--dark-brown);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.chocolate-icon {
+    color: var(--golden-yellow);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Botones de filtro JavaScript */
+.filter-buttons {
+    margin: 2rem 0;
+}
+
+.filter-btn {
+    background-color: transparent;
+    border: 2px solid var(--chocolate-brown);
+    color: var(--chocolate-brown);
+    padding: 8px 20px;
+    margin: 0 5px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--chocolate-brown);
+    color: white;
+}
+
+/* Animación para elementos que aparecen */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .filter-btn {
+        margin: 5px 2px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
